@@ -1,27 +1,60 @@
-﻿#ifndef __STACK_H__
-#define __STACK_H__
+﻿#ifndef __TSTACK_H__
+#define __TSTACK_H__
 
-const int MaxStackSize = 100;
+#include <stdexcept>
+using namespace std;
 
-template <class T>
-class TStack
-{
-  T *pMem;
-  int size;
-  int top;
+template <typename T>
+class TStack {
+private:
+    T* data;
+    int capacity;
+    int topIdx;
+
 public:
-  TStack(int _size)
-  {
-    size = _size;
-    top = -1;
-    if ((size < 1) || (size > MaxStackSize))
-      throw size;
-    pMem = new T[size];
-  }
-  ~TStack()
-  {
-    delete [] pMem;
-  }
+    // Конструктор с параметром по умолчанию
+    TStack(int size = 100) {
+        if (size <= 0) throw invalid_argument("Stack size must be positive");
+        capacity = size;
+        topIdx = -1;
+        data = new T[capacity];
+    }
+
+    ~TStack() {
+        delete[] data;
+    }
+
+    void push(const T& value) {
+        if (isFull()) throw runtime_error("Stack overflow");
+        data[++topIdx] = value;
+    }
+
+    T pop() {
+        if (isEmpty()) throw runtime_error("Stack underflow");
+        return data[topIdx--];
+    }
+
+    T& top() {
+        if (isEmpty()) throw runtime_error("Stack is empty");
+        return data[topIdx];
+    }
+
+    const T& top() const {
+        if (isEmpty()) throw runtime_error("Stack is empty");
+        return data[topIdx];
+    }
+
+    bool isEmpty() const {
+        return topIdx == -1;
+    }
+
+    bool isFull() const {
+        return topIdx == capacity - 1;
+    }
+
+    int size() const {
+        return topIdx + 1;
+    }
 };
 
 #endif

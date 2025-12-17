@@ -1,0 +1,10 @@
+^C:\USERS\ABULG\MP2-LAB3-POSTFIX\BUILD\CMAKEFILES\D81B6E473F480CE6E21D8541CD928B71\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/abulg/mp2-lab3-postfix -BC:/Users/abulg/mp2-lab3-postfix/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/abulg/mp2-lab3-postfix/build/mp2-lab3-postfix.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

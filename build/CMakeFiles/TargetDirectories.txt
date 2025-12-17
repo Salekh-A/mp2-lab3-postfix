@@ -1,0 +1,8 @@
+C:/Users/abulg/mp2-lab3-postfix/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/abulg/mp2-lab3-postfix/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/abulg/mp2-lab3-postfix/build/Sysoyev/gtest/CMakeFiles/gtest.dir
+C:/Users/abulg/mp2-lab3-postfix/build/Sysoyev/base/CMakeFiles/base_lib.dir
+C:/Users/abulg/mp2-lab3-postfix/build/Sysoyev/base/CMakeFiles/postfix.dir
+C:/Users/abulg/mp2-lab3-postfix/build/Sysoyev/base/CMakeFiles/ALL_BUILD.dir
+C:/Users/abulg/mp2-lab3-postfix/build/Sysoyev/base_test/CMakeFiles/postfix_test.dir
+C:/Users/abulg/mp2-lab3-postfix/build/Sysoyev/base_test/CMakeFiles/ALL_BUILD.dir

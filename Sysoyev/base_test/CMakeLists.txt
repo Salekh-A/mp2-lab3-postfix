@@ -1,10 +1,18 @@
-set(target postfix_test)
+project(base_test)
 
-#file(GLOB hdrs "*.h*" "../base/*.h" "../gtest/*.h")
-file(GLOB hdrs "*.h*")
-file(GLOB srcs "*.cpp" "../base/postfix.cpp")
+# ?????? ???????? ????? (??? postfix.cpp!)
+file(GLOB TEST_SOURCES "*.cpp")
 
-#include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../3rdparty")
+add_executable(postfix_test ${TEST_SOURCES})
 
-add_executable(${target} ${srcs} ${hdrs})
-target_link_libraries(${target} gtest)
+# ?????????? ?????????? ? gtest
+target_link_libraries(postfix_test 
+    base_lib   # ???? ??????????
+    gtest      # Google Test
+)
+
+# ???? ? ??????????
+target_include_directories(postfix_test PRIVATE
+    ${CMAKE_SOURCE_DIR}/Sysoyev/base
+    ${CMAKE_SOURCE_DIR}/Sysoyev/gtest
+)
