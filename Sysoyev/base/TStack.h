@@ -12,7 +12,6 @@ private:
     int topIdx;
 
 public:
-    // Конструктор с параметром по умолчанию
     TStack(int size = 100) {
         if (size <= 0) throw invalid_argument("Stack size must be positive");
         capacity = size;

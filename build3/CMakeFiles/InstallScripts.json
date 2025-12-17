@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/abulg/mp2-lab3-postfix/build3/cmake_install.cmake",
+		"C:/Users/abulg/mp2-lab3-postfix/build3/Sysoyev/gtest/cmake_install.cmake",
+		"C:/Users/abulg/mp2-lab3-postfix/build3/Sysoyev/base/cmake_install.cmake",
+		"C:/Users/abulg/mp2-lab3-postfix/build3/Sysoyev/base_test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

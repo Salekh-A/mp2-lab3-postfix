@@ -1,0 +1,10 @@
+^C:\USERS\ABULG\MP2-LAB3-POSTFIX\SYSOYEV\BASE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/abulg/mp2-lab3-postfix -BC:/Users/abulg/mp2-lab3-postfix/build3 --check-stamp-file C:/Users/abulg/mp2-lab3-postfix/build3/Sysoyev/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
